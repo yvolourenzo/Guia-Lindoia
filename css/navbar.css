@@ -1,0 +1,28 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
+    background: #fff; /* Fundo branco para a navbar */
+    border-bottom: 1px solid #ddd; /* Linha de separação */
+}
+
+
+/* Ajuste para a seção home */
+#home {
+    padding: 80px 20px 20px; /* Espaço no topo para a navbar fixa */
+    margin-top: 60px; /* Garante que a seção não fique oculta pela navbar */
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2em;
+    color: #666;
+}

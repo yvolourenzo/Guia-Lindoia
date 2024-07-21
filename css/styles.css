@@ -9,8 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background: url(https://p4.wallpaperbetter.com/wallpaper/429/377/120/drops-wallpaper-preview.jpg); /* Azul muito claro para o fundo geral */
+    padding: 0; /* Azul muito claro para o fundo geral */
     color: #333; /* Texto em cinza escuro para contraste */
     text-align: center; /* Centraliza todos os textos da página */
     display: flex;

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentação - Guia de Lindóia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/alimentacao_turismo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #007bff;
+        }
+
+        .container {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .topic {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+            max-height: 60px; /* Default height when collapsed */
+            opacity: 0.9;
+        }
+
+        .topic.open {
+            max-height: 300px; /* Adjust based on content */
+            opacity: 1;
+        }
+
+        .topic-header {
+            background-color: #073ef3;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .topic-content {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+        }
+
+        .topic.open .topic-content {
+            display: block;
+        }
+
+        .topic-header:hover {
+            background-color: #052a8c;
+        }
+
+        .topic-content p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Guia de Lindóia - Alimentação</h1>
+            <a href="index.html">Voltar para o Menu</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="topic" id="topic1">
+            <div class="topic-header">Restaurante Sabores da Serra</div>
+            <div class="topic-content">
+                <p><strong>Informações sobre:</strong> O Restaurante Sabores da Serra é conhecido por sua comida caseira e ambiente acolhedor.</p>
+                <p><strong>Onde fica:</strong> Localizado no centro de Lindóia, com fácil acesso a partir da principal avenida.</p>
+                <p><strong>O que tem no lugar:</strong> Pratos típicos da região, ambiente familiar e ótimo atendimento.</p>
+            </div>
+        </div>
+
+        <div class="topic" id="topic2">
+            <div class="topic-header">Pizzaria Bella Italia</div>
+            <div class="topic-content">
+                <p><strong>Informações sobre:</strong> A Pizzaria Bella Italia oferece uma vasta seleção de pizzas e pratos italianos.</p>
+                <p><strong>Onde fica:</strong> Situada a 2 km do centro, em uma área tranquila e acessível.</p>
+                <p><strong>O que tem no lugar:</strong> Pizzas artesanais, massas, e um ambiente descontraído.</p>
+            </div>
+        </div>
+
+        <div class="topic" id="topic3">
+            <div class="topic-header">Café e Bistrô Jardim das Flores</div>
+            <div class="topic-content">
+                <p><strong>Informações sobre:</strong> O Café e Bistrô Jardim das Flores é ideal para um café da manhã ou um lanche leve.</p>
+                <p><strong>Onde fica:</strong> Localizado perto do parque central, é um local agradável e fácil de encontrar.</p>
+                <p><strong>O que tem no lugar:</strong> Café gourmet, bolos e opções de lanches leves em um ambiente relaxante.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.topic-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const parent = this.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

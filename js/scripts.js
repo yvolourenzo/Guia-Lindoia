@@ -1,9 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Remove o overlay de carregamento após 5 segundos
+    // Remove o overlay de carregamento após 1 segundo
     setTimeout(() => {
-        document.getElementById('loading-overlay').style.opacity = '0';
-        document.querySelector('.title-overlay').style.animation = 'fadeOut 3s ease-out forwards';
-    }, 5000);
+        const loadingOverlay = document.getElementById('loading-overlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 1000); // Tempo para a transição
+        }
+
+        const titleOverlay = document.querySelector('.title-overlay');
+        if (titleOverlay) {
+            titleOverlay.style.opacity = '0';
+            setTimeout(() => {
+                titleOverlay.style.display = 'none';
+            }, 1000); // Tempo para a transição
+        }
+    }, 5000); // Tempo de exibição do overlay de carregamento
 
     // Navbar Toggle
     const toggleButton = document.getElementById('navbar-toggle');

@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8; /* Azul muito claro para o fundo geral */
+    color: #333; /* Texto em cinza escuro para contraste */
+    animation: zoomEffect 2s;
+    text-align: center; /* Centraliza todos os textos da página */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+header {
+    background: #e0e4e8; /* Azul claro muito suave para o cabeçalho */
+    color: #333; /* Texto escuro para contraste */
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #007bff; /* Azul claro para os links no cabeçalho */
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    flex: 1; /* Permite que a seção principal expanda para preencher o espaço disponível */
+}
+
+.news-item {
+    background: #ffffff; /* Fundo branco para as notícias */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center; /* Centraliza o texto dentro da notícia */
+    overflow: hidden; /* Garante que o conteúdo não saia da área definida */
+}
+
+.news-item a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto conforme o estilo do elemento pai */
+}
+
+.news-item:hover {
+    transform: scale(1.02);
+}
+
+.news-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Adiciona uma camada escura suave para melhor legibilidade */
+    z-index: 1;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2; /* Garante que a imagem fique acima da camada escura */
+}
+
+.news-item h3, .news-item p {
+    margin: 10px 0;
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima da camada escura */
+}
+
+footer {
+    background: #e0e4e8; /* Azul claro muito suave para o rodapé */
+    color: #333; /* Texto escuro para contraste */
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Corrige o posicionamento do footer */
+    width: 100%;
+    margin-top: auto; /* Garante que o footer se mantenha no fundo da página */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o formulário */
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #d0d6db; /* Cor da borda dos campos de entrada */
+    border-radius: 5px;
+    width: 100%; /* Faz com que os campos de entrada se estendam */
+    max-width: 600px; /* Limita a largura dos campos de entrada */
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff; /* Azul claro para o botão */
+    color: #ffffff; /* Texto branco para contraste */
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3; /* Azul um pouco mais escuro no hover */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: overlayEffect 2s forwards;
+    z-index: 1000;
+}
+
+@keyframes overlayEffect {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 950;
+}
+
+.rain-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 950;
+}
+
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    transform-origin: center bottom;
+}
+
+#wave1 {
+    background: radial-gradient(circle, rgba(0, 153, 204, 0.2), rgba(0, 153, 204, 0.2));
+    opacity: 0.4;
+    animation: wave1 4s infinite linear;
+    z-index: 100;
+}
+
+#wave2 {
+    background: radial-gradient(circle, rgba(0, 153, 204, 0.15), rgba(0, 153, 204, 0.15));
+    opacity: 0.3;
+    animation: wave2 4s infinite linear;
+    z-index: 90;
+}
+
+#wave3 {
+    background: radial-gradient(circle, rgba(0, 153, 204, 0.1), rgba(0, 153, 204, 0.1));
+    opacity: 0.2;
+    animation: wave3 3s infinite linear;
+    z-index: 80;
+}
+
+#wave4 {
+    background: radial-gradient(circle, rgba(0, 153, 204, 0.05), rgba(0, 153, 204, 0.05));
+    opacity: 0.1;
+    animation: wave4 3s infinite linear;
+    z-index: 70;
+}
+
+@keyframes wave1 {
+    0% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes wave2 {
+    0% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes wave3 {
+    0% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes wave4 {
+    0% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Ajuste a distância do fundo da tela */
+    right: 20px; /* Ajuste a distância da borda direita da tela */
+    z-index: 1000; /* Garante que o ícone fique acima dos outros elementos */
+    background-color: #25D366; /* Cor de fundo do ícone (verde WhatsApp) */
+    border-radius: 50%; /* Torna o fundo do ícone circular */
+    padding: 10px; /* Espaçamento ao redor do ícone */
+}
+
+.whatsapp-icon img {
+    width: 50px; /* Largura do ícone */
+    height: auto; /* Altura ajustada proporcionalmente */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+/* Estilos para o GIF de carregamento */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que o GIF fique acima de outros elementos */
+    opacity: 2;
+    transition: opacity 3s ease-out; /* Tempo de transição prolongado */
+}
+
+#loading-overlay img {
+    width: 100%; /* Ajuste o tamanho do GIF conforme necessário */
+    height: 100%; /* Mantém a proporção do GIF */
+    opacity: 1;
+}

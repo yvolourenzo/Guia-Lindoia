@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo - Guia de Lindóia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+            position: fixed;
+            top: 0;
+            width: 97%;
+            z-index: 1000;
+            height: 60px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .carousel-container {
+            width: 100%;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            position: relative;
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-content {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .carousel-content p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .slick-prev, .slick-next {
+            font-size: 2em;
+            color: #fff;
+            z-index: 1001;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 10px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 30px;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .navbar h1 {
+                font-size: 1.2em;
+            }
+
+            .navbar a {
+                font-size: 1.2em;
+                padding: 8px 16px;
+            }
+
+            .carousel-content {
+                width: 90%;
+            }
+
+            .carousel-content h2 {
+                font-size: 1.5em;
+            }
+
+            .carousel-content p {
+                font-size: 1em;
+            }
+
+            .slick-prev, .slick-next {
+                font-size: 1.5em;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar h1 {
+                font-size: 1em;
+            }
+
+            .navbar a {
+                font-size: 1em;
+                padding: 6px 12px;
+            }
+
+            .carousel-content {
+                width: 95%;
+            }
+
+            .carousel-content h2 {
+                font-size: 1.2em;
+            }
+
+            .carousel-content p {
+                font-size: 0.9em;
+            }
+
+            .slick-prev, .slick-next {
+                font-size: 1.2em;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Guia de Lindóia - Turismo</h1>
+            <a href="index.html"><i class="fas fa-home"></i></a>
+        </div>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" style="background-image: url('img-turismo/trilhaecologica.jpg');">
+                <div class="carousel-content">
+                    <h2>Trilha Ecológica</h2>
+                    <p><strong>Informações sobre:</strong> Uma trilha ecológica que oferece contato direto com a natureza, ideal para caminhadas.</p>
+                    <p><strong>Onde fica:</strong> Localizada na área rural de Lindóia, acessível por estrada de terra.</p>
+                    <p><strong>O que tem no lugar:</strong> Diversidade de fauna e flora, trilhas sinalizadas e áreas para piquenique.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/trilha_do_atila.jpg');">
+                <div class="carousel-content">
+                    <h2>Trilha do Átila</h2>
+                    <p><strong>Informações sobre:</strong> Trilha desafiadora com vistas panorâmicas, ideal para aventureiros.</p>
+                    <p><strong>Onde fica:</strong> Fica a 7 km do centro de Lindóia, com acesso por estrada de terra.</p>
+                    <p><strong>O que tem no lugar:</strong> Ponto de observação, áreas para descanso e sinalização adequada.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/skateparqueescoadouro.jpg');">
+                <div class="carousel-content">
+                    <h2>Skate Parque Escoadouro</h2>
+                    <p><strong>Informações sobre:</strong> Um parque dedicado aos amantes do skate, com várias rampas e obstáculos.</p>
+                    <p><strong>Onde fica:</strong> Situado no centro da cidade, próximo ao Escoadouro.</p>
+                    <p><strong>O que tem no lugar:</strong> Pistas de skate, áreas para espectadores e iluminação noturna.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/garrafa_lindoia.jpg');">
+                <div class="carousel-content">
+                    <h2>Monumento da Garrafa</h2>
+                    <p><strong>Informações sobre:</strong> Um monumento em homenagem à produção de água mineral da região.</p>
+                    <p><strong>Onde fica:</strong> Localizado no centro da cidade, fácil acesso.</p>
+                    <p><strong>O que tem no lugar:</strong> Monumento, áreas de descanso e pontos de informação turística.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/igrejasaobenedito.jpg');">
+                <div class="carousel-content">
+                    <h2>Igreja São Benedito</h2>
+                    <p><strong>Informações sobre:</strong> Igreja histórica conhecida por sua arquitetura única e importância cultural.</p>
+                    <p><strong>Onde fica:</strong> Situada no centro histórico de Lindóia.</p>
+                    <p><strong>O que tem no lugar:</strong> Missas regulares, visitas guiadas e eventos culturais.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/escoadouro_do_lago.jpg');">
+                <div class="carousel-content">
+                    <h2>Escoadouro do Lago</h2>
+                    <p><strong>Informações sobre:</strong> Um lago artificial com áreas para lazer e práticas esportivas.</p>
+                    <p><strong>Onde fica:</strong> Localizado próximo ao centro de Lindóia, acessível por carro.</p>
+                    <p><strong>O que tem no lugar:</strong> Áreas de lazer, quadras esportivas e pista de caminhada.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/lagao.jpg');">
+                <div class="carousel-content">
+                    <h2>Lagão</h2>
+                    <p><strong>Informações sobre:</strong> Um grande lago natural perfeito para passeios e piqueniques.</p>
+                    <p><strong>Onde fica:</strong> Situado na periferia de Lindóia, com acesso por estrada pavimentada.</p>
+                    <p><strong>O que tem no lugar:</strong> Áreas de piquenique, trilhas ao redor do lago e aluguel de barcos.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/laguinho.jpg');">
+                <div class="carousel-content">
+                    <h2>Laguinho</h2>
+                    <p><strong>Informações sobre:</strong> Pequeno lago ideal para passeios tranquilos e observação da natureza.</p>
+                    <p><strong>Onde fica:</strong> Localizado dentro de um parque no centro da cidade.</p>
+                    <p><strong>O que tem no lugar:</strong> Áreas de descanso, playgrounds e trilhas para caminhada.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/mirantedocristo.jpg');">
+                <div class="carousel-content">
+                    <h2>Mirante do Cristo</h2>
+                    <p><strong>Informações sobre:</strong> Um mirante com uma estátua do Cristo Redentor, oferecendo vistas panorâmicas da cidade.</p>
+                    <p><strong>Onde fica:</strong> Situado no alto de uma colina, acessível por estrada pavimentada.</p>
+                    <p><strong>O que tem no lugar:</strong> Vista panorâmica, áreas para fotos e espaço para meditação.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img-turismo/museu.jpg');">
+                <div class="carousel-content">
+                    <h2>Museu Histórico</h2>
+                    <p><strong>Informações sobre:</strong> Museu dedicado à história e cultura de Lindóia e região.</p>
+                    <p><strong>Onde fica:</strong> Localizado no centro da cidade.</p>
+                    <p><strong>O que tem no lugar:</strong> Exposições permanentes e temporárias, visitas guiadas e loja de souvenirs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Todos os direitos reservados © 2024
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<button type="button" class="slick-prev">❮</button>',
+                nextArrow: '<button type="button" class="slick-next">❯</button>'
+            });
+        });
+    </script>
+</body>
+</html>
